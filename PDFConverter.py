@@ -2,9 +2,8 @@ from  playwright.sync_api import sync_playwright
 from pathlib import Path
 import sys
 
-#terminal app to get file (microsoft word, .txt wgatever), paste into website converter using selenium/beautifulsoup, paste next to file location
+#terminal script to convert into .pdf
 
-#Doc1.docx
 
 def get_file_name() -> str:
     if len(sys.argv) > 1:
@@ -32,7 +31,6 @@ if FILE:
         
         with page.expect_download() as download_info:
             page.click('.downloader__btn')
-            print(f"Download info: {download_info}")
         download = download_info.value
         
         download.save_as(f"{download.suggested_filename}")
