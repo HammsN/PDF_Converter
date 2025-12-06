@@ -1,8 +1,8 @@
 # PDF Converter
 Python script to convert to pdf from terminal
 
-#Installation
+# Installation
 Download .exe or run .bat file
 
-#Usage
+# Usage
 Place file in same directory and type it's name + extension
