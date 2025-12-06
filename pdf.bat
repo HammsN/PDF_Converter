@@ -7,5 +7,5 @@ if "%1"=="--help" (
 )
 
 @call .venv\Scripts\activate.bat
-@python pdf.py %*
-@deactivate
+@.venv\Scripts\python.exe PDFConverter.py %*
+@pause
