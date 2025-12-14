@@ -1,9 +1,10 @@
 from  playwright.sync_api import sync_playwright
 from pathlib import Path
-import sys
+import sys, os
 
 #terminal script to convert into .pdf
 
+os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "0"
 
 def get_file_name() -> str:
     if len(sys.argv) > 1:
@@ -21,7 +22,7 @@ FILE = get_file_name()
 
 if FILE:
     with sync_playwright() as playwright:
-        browser = playwright.firefox.launch()
+        browser = playwright.webkit.launch()
         page = browser.new_page()
         page.goto(WORD_TO_PDF)
         

@@ -1,3 +1,4 @@
+@REM Must have python installed to use this
 @echo off
 if "%1"=="--help" (
     echo %~nx0
